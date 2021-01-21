@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="260dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="10dp" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/border_top_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <EditText
+            android:id="@+id/EditT_count"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="0.99"
+            android:background="@drawable/border_line"
+            android:ems="10"
+            android:hint="请输入金额"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/border_top_bottom"
+        android:layout_alignLeft="@+id/LinearLayout1"
+        android:layout_below="@+id/LinearLayout1" >
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/border_line"
+            android:gravity="center"
+            android:text="2020-01-01"
+            android:textSize="17dp" />
+
+        <RadioGroup
+            android:id="@+id/rbGroup"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_line"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/radioB_gz"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:layout_weight="1"
+                android:text="工资/外快"
+                android:textColor="@color/textColor"/>
+
+            <RadioButton
+                android:id="@+id/radioB_shf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="生活费"
+                android:textColor="@color/textColor"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_below="@+id/LinearLayout2"
+        android:background="@drawable/border_top_bottom">
+        <EditText
+            android:id="@+id/editT_note"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:maxLines="15"
+            android:background="@drawable/border_line"
+            android:gravity="top"
+            android:hint="备注" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sa"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/LinearLayout3"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/border"
+        android:text="保存"
+        android:textColor="#ffffff"/>
+
+</RelativeLayout>

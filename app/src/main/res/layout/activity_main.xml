@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity" >
+
+	<TableLayout
+		android:id="@+id/tableLayout1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true">
+
+		<TableRow
+			android:id="@+id/tableRow1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:id="@+id/TextV_day"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="工资/外快"
+				android:textColor="#55000000"
+				android:gravity="center"
+				android:textSize="16sp" />
+
+			<TextView
+				android:id="@+id/textV_month"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="生活费"
+				android:textColor="#55000000"
+				android:textSize="16sp" />
+		</TableRow>
+
+		<TableRow
+			android:id="@+id/tableRow2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:id="@+id/tv_gz"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="0.00"
+				android:textSize="28sp" />
+
+			<TextView
+				android:id="@+id/tv_shf"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="00.00"
+				android:textSize="28sp" />
+
+		</TableRow>
+
+	</TableLayout>
+
+    <ListView
+        android:id="@+id/detailsLV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/btn">
+    </ListView>
+
+
+	<LinearLayout
+		android:id="@+id/btn"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/tableLayout1">
+
+		<Button
+			android:id="@+id/btn_report_month"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:onClick="click_vision"
+			android:background="@drawable/border_white"
+			android:text="总览"
+			android:textColor="@color/textColor"
+			android:textSize="15sp" />
+
+		<Button
+			android:id="@+id/btn_add"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:onClick="click"
+			android:background="@drawable/border_white"
+			android:text="记一笔"
+			android:textColor="@color/textColor"
+			android:textSize="15sp" />
+
+	</LinearLayout>
+
+</RelativeLayout>
