@@ -64,28 +64,32 @@
 
 	</TableLayout>
 
-    <ListView
-        android:id="@+id/detailsLV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:layout_below="@+id/btn">
-    </ListView>
-
 
 	<LinearLayout
 		android:id="@+id/btn"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@id/tableLayout1">
+		android:layout_below="@+id/tableLayout1">
 
 		<Button
 			android:id="@+id/btn_report_month"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
-			android:onClick="click_vision"
 			android:background="@drawable/border_white"
+			android:onClick="click_vision"
 			android:text="总览"
+			android:textColor="@color/textColor"
+			android:textSize="15sp" />
+
+		<Button
+			android:id="@+id/btn_moth"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@drawable/border_white"
+			android:onClick="click_month"
+			android:text="月视图"
 			android:textColor="@color/textColor"
 			android:textSize="15sp" />
 
@@ -94,12 +98,20 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
-			android:onClick="click"
 			android:background="@drawable/border_white"
+			android:onClick="click"
 			android:text="记一笔"
 			android:textColor="@color/textColor"
 			android:textSize="15sp" />
 
 	</LinearLayout>
+
+	<ListView
+		android:id="@+id/detailsLV"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/btn">
+
+	</ListView>
 
 </RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/demo_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_y_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2021年01月" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|center_horizontal"
+            android:text="支"
+            android:textColor="#2196F3"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_zhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="0.00"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|center_horizontal"
+            android:text="京"
+            android:textColor="#F44336"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_jing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="0.00"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|center_horizontal"
+            android:text="团"
+            android:textColor="#FF9800"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_tuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="0.00"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|center_horizontal"
+            android:text="微"
+            android:textColor="#4CAF50"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_wei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="0.00"
+            android:textSize="18sp" />
+    </TableRow>
+</LinearLayout>

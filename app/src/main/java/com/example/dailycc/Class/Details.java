@@ -1,4 +1,4 @@
-package com.example.dailycc;
+package com.example.dailycc.Class;
 
 public class Details {
 	private long id;

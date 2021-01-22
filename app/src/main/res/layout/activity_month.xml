@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.Activity_month">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|center_horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal"
+                    android:text="支付宝"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal"
+                    android:text="京东"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal" />
+            </TableRow>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|center_horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal"
+                    android:text="美团"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal"
+                    android:text="微信"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal" />
+            </TableRow>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+                <Button
+                    android:id="@+id/btn_m_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:text="合计"
+                    android:textColor="#4CAF50"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|center_horizontal"
+                    android:hint="00.00"
+                    android:textSize="18sp" />
+            </TableRow>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/month_LV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableLayout">
+
+    </ListView>
+
+</LinearLayout>

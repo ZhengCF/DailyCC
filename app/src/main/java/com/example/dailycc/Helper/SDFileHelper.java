@@ -1,4 +1,4 @@
-package com.example.dailycc;
+package com.example.dailycc.Helper;
 
 import android.content.Context;
 import android.os.Environment;

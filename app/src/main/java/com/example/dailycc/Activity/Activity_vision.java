@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
-import com.example.dailycc.DetailsDao;
+import com.example.dailycc.Dao.DetailsDao;
 import com.example.dailycc.R;
 
 import java.util.Calendar;
