@@ -23,11 +23,13 @@ public class Month_4Dao {
         SQLiteDatabase db = myHelper_month_4.getWritableDatabase();
         //
         ContentValues values = new ContentValues();
-
+        values.put("date", month_4.getDate());
         values.put("zhifubao", month_4.getZhiFuBao());
         values.put("jingdong", month_4.getJingDong());
-        values.put("weixin", month_4.getWeiXin());
         values.put("meituan", month_4.getMeiTuan());
+        values.put("weixin", month_4.getWeiXin());
+        values.put("yunshanfu",month_4.getYunShanFu());
+        values.put("sum",month_4.getSum());
         //insert values to details
         long id = db.insert("month_4s", null, values);
         month_4.setId(id);
@@ -38,28 +40,33 @@ public class Month_4Dao {
     public void update(Month_4 month_4) {
         SQLiteDatabase db = myHelper_month_4.getWritableDatabase();
         ContentValues values = new ContentValues();    //data need to change
-
+        System.out.println(month_4);
         values.put("zhifubao", month_4.getZhiFuBao());
         values.put("jingdong", month_4.getJingDong());
-        values.put("weixin", month_4.getWeiXin());
         values.put("meituan", month_4.getMeiTuan());
-        int id = db.update("month_4s", values, "_id=?", new String[]{month_4.getId() + ""});
+        values.put("weixin", month_4.getWeiXin());
+        values.put("yunshanfu",month_4.getYunShanFu());
+        values.put("sum",month_4.getSum());
+        int id = db.update("month_4s", values, "date=?", new String[]{month_4.getDate() + ""});
         //update and return number of row
         db.close();
     }
 
     public List<Month_4> queryAll() {
         SQLiteDatabase db = myHelper_month_4.getWritableDatabase();
-        List<Month_4> list = new ArrayList<Month_4>();
+        List<Month_4> list = new ArrayList<>();
         Cursor c = db.query("month_4s", null, null, null, null, null, "_id DESC");
         while (c.moveToNext()) {
             //
             long id = c.getLong(c.getColumnIndex("_id"));
-            double zhifubao = c.getDouble(4);
-            double jingdong = c.getDouble(3);
-            double weixin = c.getDouble(2);
-            double meituan = c.getDouble(1);
-            list.add(new Month_4(id, zhifubao, jingdong, weixin, meituan));
+            int date=c.getInt(c.getColumnIndex("date"));
+            double zhifubao = c.getDouble(c.getColumnIndex("zhifubao"));
+            double jingdong = c.getDouble(c.getColumnIndex("jingdong"));
+            double meituan = c.getDouble(c.getColumnIndex("meituan"));
+            double weixin = c.getDouble(c.getColumnIndex("weixin"));
+            double yunshanfu=c.getDouble(c.getColumnIndex("yunshanfu"));
+            double sum=c.getInt(c.getColumnIndex("sum"));
+            list.add(new Month_4(id, date, zhifubao, jingdong, meituan, weixin, yunshanfu, sum));
         }
         c.close();
         db.close();

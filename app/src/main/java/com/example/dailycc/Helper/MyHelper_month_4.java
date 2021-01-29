@@ -13,7 +13,7 @@ public class MyHelper_month_4 extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // TODO Auto-generated method stub
         System.out.println("onCreat");
-        db.execSQL("CREATE TABLE month_4s(_id INTEGER PRIMARY KEY AUTOINCREMENT,zhifubao CHAR(20),jingdong CHAR(20),weixin CHAR(20),meituan CHAR(20))");
+        db.execSQL("CREATE TABLE month_4s(_id INTEGER PRIMARY KEY AUTOINCREMENT,date CHAR(20),zhifubao CHAR(20),jingdong CHAR(20),weixin CHAR(20),meituan CHAR(20),yunshanfu CHAR(20), sum CHAR(20))");
     }
 
     @Override

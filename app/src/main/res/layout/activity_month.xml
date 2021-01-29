@@ -15,14 +15,17 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/border_white"
             android:gravity="center|center_horizontal">
 
             <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:gravity="center|center_horizontal"
                     android:text="支付宝"
@@ -35,18 +38,22 @@
                     android:ems="5"
                     android:gravity="center"
                     android:hint="0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:maxEms="4"
+                    android:maxLength="8"
+                    android:minEms="4" />
 
             </TableRow>
 
             <TableRow
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="center|center_horizontal">
+                android:layout_weight="1"
+                android:gravity="center">
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:gravity="center|center_horizontal"
                     android:text="京东"
@@ -59,7 +66,10 @@
                     android:ems="5"
                     android:gravity="center"
                     android:hint="0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:maxEms="4"
+                    android:maxLength="8"
+                    android:minEms="4" />
             </TableRow>
 
         </TableRow>
@@ -67,15 +77,17 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/border_white"
             android:gravity="center|center_horizontal">
 
             <TableRow
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="right">
+                android:layout_weight="1"
+                android:gravity="center">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:gravity="center|center_horizontal"
                     android:text="美团"
@@ -88,16 +100,20 @@
                     android:ems="5"
                     android:gravity="center"
                     android:hint="0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:maxEms="4"
+                    android:maxLength="8"
+                    android:minEms="4" />
             </TableRow>
 
             <TableRow
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="center|center_horizontal">
+                android:layout_weight="1"
+                android:gravity="center">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
                     android:gravity="center|center_horizontal"
                     android:text="微信"
@@ -110,7 +126,10 @@
                     android:ems="5"
                     android:gravity="center"
                     android:hint="0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:maxEms="4"
+                    android:maxLength="8"
+                    android:minEms="4" />
             </TableRow>
 
         </TableRow>
@@ -118,21 +137,42 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="right">
+            android:background="@drawable/border_white"
+            android:gravity="center">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal"
+                    android:text="云闪付"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:maxEms="4"
+                    android:maxLength="8"
+                    android:minEms="4" />
+
+            </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="3">
+                android:layout_height="wrap_content">
 
                 <Button
                     android:id="@+id/btn_m_sum"
-                    android:layout_width="wrap_content"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
                     android:text="合计"
@@ -140,12 +180,14 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/tv_esum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:gravity="center|center_horizontal"
                     android:hint="00.00"
+                    android:maxEms="5"
+                    android:maxLength="16"
+                    android:minEms="5"
                     android:textSize="18sp" />
             </TableRow>
 

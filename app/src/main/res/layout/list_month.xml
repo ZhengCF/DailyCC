@@ -5,8 +5,11 @@
     android:id="@+id/demo_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/border_white"
     android:orientation="vertical"
-    android:visibility="visible">
+    android:visibility="visible"
+    tools:visibility="visible"
+    >
 
 
     <TableRow
@@ -18,13 +21,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="2021年01月" />
+            android:text="2021年01月"/>
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:background="@drawable/border_white">
 
         <TextView
             android:id="@+id/textView4"
@@ -32,9 +35,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center|center_horizontal"
-            android:text="支"
+            android:text="支: "
             android:textColor="#2196F3"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv_zhi"
@@ -42,7 +45,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:hint="0.00"
-            android:textSize="18sp" />
+            android:maxEms="4"
+            android:maxLength="8"
+            android:minEms="4"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -50,9 +56,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center|center_horizontal"
-            android:text="京"
+            android:text="京: "
             android:textColor="#F44336"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv_jing"
@@ -60,7 +66,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:hint="0.00"
-            android:textSize="18sp" />
+            android:maxEms="4"
+            android:maxLength="8"
+            android:minEms="4"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -68,9 +77,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center|center_horizontal"
-            android:text="团"
+            android:text="团: "
             android:textColor="#FF9800"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv_tuan"
@@ -78,7 +87,18 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:hint="0.00"
-            android:textSize="18sp" />
+            android:maxEms="4"
+            android:maxLength="8"
+            android:minEms="4"
+            android:textSize="16sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_white"
+        android:paddingBottom="8dp">
 
         <TextView
             android:id="@+id/textView7"
@@ -86,9 +106,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center|center_horizontal"
-            android:text="微"
+            android:text="微: "
             android:textColor="#4CAF50"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv_wei"
@@ -96,6 +116,53 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:hint="0.00"
-            android:textSize="18sp" />
+            android:maxEms="4"
+            android:maxLength="8"
+            android:minEms="4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|center_horizontal"
+            android:text="云: "
+            android:textColor="#FF5722"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_yun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="0.00"
+            android:maxEms="4"
+            android:maxLength="8"
+            android:minEms="4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|center_horizontal"
+            android:text="总: "
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="0.00"
+            android:maxEms="5"
+            android:maxLength="10"
+            android:minEms="5"
+            android:textColor="#000000"
+            android:textSize="16sp" />
     </TableRow>
+
 </LinearLayout>
