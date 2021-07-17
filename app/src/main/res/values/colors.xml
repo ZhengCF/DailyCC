@@ -6,4 +6,5 @@
     <color name="textColor">#09a56d</color>
     <color name="pinkTheme">#FFB6C1</color>
     <color name="whiteBG">#ffffff</color>
+    <color name="backGray">#eaeaea</color>
 </resources>

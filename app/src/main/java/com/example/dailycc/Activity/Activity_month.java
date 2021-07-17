@@ -1,5 +1,6 @@
 package com.example.dailycc.Activity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -47,6 +48,7 @@ public class Activity_month extends AppCompatActivity {
     private EditText e_yun;
     private TextView tv_esum;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,6 +133,7 @@ public class Activity_month extends AppCompatActivity {
         }
 
         // 获取一个条目视图
+        @SuppressLint("DefaultLocale")
         public View getView(int position, View convertView, ViewGroup parent) {
             // 重用convertView
             View item = convertView != null ? convertView : View.inflate(
@@ -148,14 +151,14 @@ public class Activity_month extends AppCompatActivity {
             final Month_4 a = list.get(position);
 
             // 把Details对象中的数据放到TextView中
-            list_zhi.setText("" + a.getZhiFuBao());
-            list_jing.setText("" + a.getJingDong());
-            list_tuan.setText("" + a.getMeiTuan());
-            list_wei.setText("" + a.getWeiXin());
-            list_yun.setText("" + a.getYunShanFu());
-            list_date.setText(a.getDate() / 100 + "年" + a.getDate() % 100 + "月");
+            list_zhi.setText(String.format("%s", a.getZhiFuBao()));
+            list_jing.setText(String.format("%s", a.getJingDong()));
+            list_tuan.setText(String.format("%s", a.getMeiTuan()));
+            list_wei.setText(String.format("%s", a.getWeiXin()));
+            list_yun.setText(String.format("%s", a.getYunShanFu()));
+            list_date.setText(String.format("%d年%d月", a.getDate() / 100, a.getDate() % 100));
             System.out.println(a.getSum());
-            list_sum.setText(a.getSum() + "");
+            list_sum.setText(String.format("%s", a.getSum()));
             return item;
         }
     }

@@ -168,11 +168,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click_vision(View v) {//总览
-        Intent intent = new Intent(MainActivity.this, Activity_vision.class);
+        Intent intent = new Intent(MainActivity.this, Activity_account_details.class);
         startActivityForResult(intent, 3);
     }
 
-    public void click_month(View v) {//总览
+    public void click_month(View v) {//月视图
         Intent intent = new Intent(MainActivity.this, Activity_month.class);
         startActivityForResult(intent, 3);
     }

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+	android:background="@drawable/border_back"
     tools:context=".Activity.MainActivity" >
 
 	<TableLayout
@@ -9,6 +10,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_alignParentTop="true"
+		android:background="@drawable/border_all_td"
 		android:layout_centerHorizontal="true">
 
 		<TableRow
@@ -69,14 +71,15 @@
 		android:id="@+id/btn"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:background="@drawable/border_all_mid"
 		android:layout_below="@+id/tableLayout1">
 
 		<Button
 			android:id="@+id/btn_report_month"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:background="@color/colorPrimary"
 			android:layout_weight="1"
-			android:background="@drawable/border_white"
 			android:onClick="click_vision"
 			android:text="总览"
 			android:textColor="@color/textColor"
@@ -86,8 +89,8 @@
 			android:id="@+id/btn_moth"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:background="@color/colorPrimary"
 			android:layout_weight="1"
-			android:background="@drawable/border_white"
 			android:onClick="click_month"
 			android:text="月视图"
 			android:textColor="@color/textColor"
@@ -97,8 +100,8 @@
 			android:id="@+id/btn_add"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:background="@color/colorPrimary"
 			android:layout_weight="1"
-			android:background="@drawable/border_white"
 			android:onClick="click"
 			android:text="记一笔"
 			android:textColor="@color/textColor"
@@ -110,6 +113,7 @@
 		android:id="@+id/detailsLV"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:background="@drawable/border_all_td"
 		android:layout_below="@+id/btn">
 
 	</ListView>
