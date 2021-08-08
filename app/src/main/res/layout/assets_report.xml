@@ -17,15 +17,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="10000"
-            android:textSize="50dp"
-            android:textColor="@color/textColor"/>
+            android:textColor="@color/textColor"
+            android:textSize="50dp" />
     </LinearLayout>
 
     <TableLayout
         android:id="@+id/art1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/arl1">
+        android:layout_below="@+id/arl1"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border_back">
 
         <TableRow
             android:layout_width="match_parent"
@@ -37,6 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="@drawable/border_all_mid"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -44,9 +47,12 @@
                     android:id="@+id/btn_positive"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
                     android:layout_weight="1"
                     android:background="@drawable/border_white"
                     android:text="正"
+                    android:textColor="@color/textColor"
                     android:textSize="20dp" />
 
                 <EditText
@@ -54,18 +60,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:ems="4"
+                    android:background="@drawable/border_white"
+                    android:ems="3"
+                    android:hint="来源"
                     android:inputType="textPersonName"
-                    android:text="Name" />
+                    android:maxLength="6" />
 
                 <EditText
                     android:id="@+id/et_p_value"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/border_white"
                     android:ems="4"
                     android:hint="1000.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:maxLength="8" />
 
                 <Button
                     android:id="@+id/btn_negative"
@@ -74,6 +84,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/border_white"
                     android:text="负"
+                    android:textColor="@color/textColor"
                     android:textSize="20dp" />
 
                 <EditText
@@ -81,29 +92,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:ems="4"
+                    android:background="@drawable/border_white"
+                    android:ems="3"
+                    android:hint="来源"
                     android:inputType="textPersonName"
-                    android:text="Name" />
+                    android:maxLength="6" />
 
                 <EditText
                     android:id="@+id/et_n_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@drawable/border_white"
                     android:ems="4"
                     android:hint="1000.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:maxLength="8" />
 
             </LinearLayout>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center">
 
             <LinearLayout
+                android:id="@+id/ll_2l"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -115,66 +131,82 @@
                     android:id="@+id/lv_positive"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_gravity="top"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_all_td"
+                    android:keepScreenOn="true">
 
                 </ListView>
 
                 <Space
-                    android:layout_width="85dp"
-                    android:layout_height="10dp" />
+                    android:layout_width="35dp"
+                    android:layout_height="7dp" />
 
                 <ListView
                     android:id="@+id/lv_negative"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"></ListView>
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
                     android:layout_weight="1"
-                    android:gravity="right|center_horizontal"
-                    android:text="+" />
-
-                <TextView
-                    android:id="@+id/tv_positive"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="TextView" />
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right|center_horizontal"
-                    android:text="-" />
-
-                <TextView
-                    android:id="@+id/tv_negative"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="TextView" />
-
+                    android:background="@drawable/border_all_td"></ListView>
             </LinearLayout>
         </TableRow>
 
     </TableLayout>
+
+    <ListView
+        android:id="@+id/lv_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ll_bottem" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/art1"
+        android:background="@drawable/border_all_mid"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:gravity="right|center_horizontal"
+            android:text="+"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:gravity="right|center_horizontal"
+            android:text="-"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="TextView" />
+
+    </LinearLayout>
 
 </RelativeLayout>
