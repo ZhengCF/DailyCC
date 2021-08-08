@@ -23,10 +23,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.example.dailycc.Details;
-import com.example.dailycc.DetailsDao;
+import com.example.dailycc.Class.Details;
+import com.example.dailycc.Dao.DetailsDao;
 import com.example.dailycc.R;
-import com.example.dailycc.SDFileHelper;
+import com.example.dailycc.Helper.SDFileHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int INPT = 001;
     private static final int OUPT = 003;
     private static final int CGCL = 004;
+    private static final int CLEAR = 005;
     private DetailsDao dao;
     private List<Details> list;
     private double[] totals;
@@ -167,7 +168,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click_vision(View v) {//总览
-        Intent intent = new Intent(MainActivity.this, Activity_vision.class);
+        Intent intent = new Intent(MainActivity.this, Activity_account_details.class);
+        startActivityForResult(intent, 3);
+    }
+
+    public void click_month(View v) {//月视图
+        Intent intent = new Intent(MainActivity.this, Activity_month.class);
         startActivityForResult(intent, 3);
     }
 
@@ -267,6 +273,7 @@ public class MainActivity extends AppCompatActivity {
         menu.add(1, INPT, 4, "导入账单");
         menu.add(1, OUPT, 3, "导出账单");
         menu.add(1, CGCL, 4, "换色");
+        menu.add(1, CLEAR, 5, "清空");
         menu.add(1, OUT, 2, "退出");
         return true;
     }
@@ -292,7 +299,8 @@ public class MainActivity extends AppCompatActivity {
                 }
 //                Toast.makeText(getApplicationContext(), "导出成功，路径:",
 //                        Toast.LENGTH_SHORT).show();
-            case CGCL:
+            case CLEAR:
+                CLEAR();
                 break;
             case OUT:
                 MainActivity.this.finish();
@@ -303,8 +311,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void CGCL() {
-
+    public void CLEAR() {
+        dao.deleteAll();
+        list = dao.queryAll();
+        detailsLV = (ListView) findViewById(R.id.detailsLV);
+        adapter.notifyDataSetChanged(); // 刷新界面
+        detailsLV.setAdapter(adapter);// add adapter
     }
 
     public void INPT() {

@@ -10,7 +10,7 @@
         android:id="@+id/LinearLayout1"
         android:layout_width="match_parent"
         android:layout_height="58dp"
-        android:background="@drawable/border_top_bottom"
+        android:background="@drawable/border_all_mid"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true">
 
@@ -30,7 +30,7 @@
         android:id="@+id/LinearLayout2"
         android:layout_width="match_parent"
         android:layout_height="58dp"
-        android:background="@drawable/border_top_bottom"
+        android:background="@drawable/border_all_mid"
         android:layout_alignLeft="@+id/LinearLayout1"
         android:layout_below="@+id/LinearLayout1" >
 
@@ -78,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="88dp"
         android:layout_below="@+id/LinearLayout2"
-        android:background="@drawable/border_top_bottom">
+        android:background="@drawable/border_all_mid">
         <EditText
             android:id="@+id/editT_note"
             android:layout_width="match_parent"

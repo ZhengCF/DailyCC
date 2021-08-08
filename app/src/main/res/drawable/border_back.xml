@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 设置透明背景色-->
-    <solid android:color= "@color/colorPrimary" />
+    <solid android:color= "@color/backGray" />
 
     <!-- 设置一个黑色边框
     <stroke
@@ -18,7 +18,7 @@
         android:top="5dp"
         android:bottom="5dp"-->
     <padding
-        android:left="10dp"
-        android:right="10dp" />
+        android:left="8dp"
+        android:right="8dp" />
 
 </shape>

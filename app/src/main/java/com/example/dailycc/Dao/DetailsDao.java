@@ -1,4 +1,4 @@
-package com.example.dailycc;
+package com.example.dailycc.Dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.dailycc.Class.Details;
+import com.example.dailycc.Helper.MyHelper;
 
 public class DetailsDao {
     private MyHelper helper;
